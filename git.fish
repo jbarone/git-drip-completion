@@ -110,6 +110,10 @@ complete -f -c git -n '__fish_git_drip_using_command feature finish' -s F -d 'Fe
 complete -f -c git -n '__fish_git_drip_using_command feature finish' -s m -d 'Merge instead of rebase'
 complete -f -c git -n '__fish_git_drip_using_command feature finish' -a '(__fish_git_drip_branches feature)' -d 'Feature branch'
 
+complete -f -c git -n '__fish_git_drip_using_command feature' -a delete   -d 'Delete a feature branch'
+complete -f -c git -n '__fish_git_drip_using_command feature delete' -s F -d 'Delete remote branch as well'
+complete -f -c git -n '__fish_git_drip_using_command feature delete' -a '(__fish_git_drip_branches feature)' -d 'Feature branch'
+
 complete -f -c git -n '__fish_git_drip_using_command feature' -a publish  -d 'Publish a feature branch to remote'
 complete -f -c git -n '__fish_git_drip_using_command feature publish' -a '(__fish_git_drip_unpublished_branches feature)' -d 'Feature branch'
 

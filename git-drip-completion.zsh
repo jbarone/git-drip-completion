@@ -208,6 +208,7 @@ __git-drip-feature ()
 				'rebase:Rebase from integration branch.'
 				'checkout:Checkout local feature branch.'
 				'pull:Pull changes from remote.'
+                'delete:Delete an abandoned feature branch.'
 			)
 			_describe -t commands 'git drip feature' subcommands
 			_arguments \
@@ -222,6 +223,12 @@ __git-drip-feature ()
 						-F'[Fetch from origin before performing finish]'\
 						':feature:__git_drip_feature_list'\
 						':branch-name:__git_branch_names'
+				;;
+
+				(delete)
+					_arguments \
+						-F'[Delete remote branch as well.]' \
+						':feature:__git_drip_feature_list'
 				;;
 
 				(finish)
