@@ -209,6 +209,7 @@ __git-drip-feature ()
 				'checkout:Checkout local feature branch.'
 				'pull:Pull changes from remote.'
                 'delete:Delete an abandoned feature branch.'
+                'describe:Describe a feature branch.'
 			)
 			_describe -t commands 'git drip feature' subcommands
 			_arguments \
@@ -230,6 +231,11 @@ __git-drip-feature ()
 						-F'[Delete remote branch as well.]' \
 						':feature:__git_drip_feature_list'
 				;;
+
+                (describe)
+					_arguments \
+						':feature:__git_drip_feature_list'\
+                ;;
 
 				(finish)
 					_arguments \

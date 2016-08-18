@@ -81,7 +81,7 @@ __git_drip_init ()
 
 __git_drip_feature ()
 {
-	local subcommands="list start finish publish track diff rebase co checkout pull delete help"
+	local subcommands="list start finish publish track diff rebase co checkout pull describe delete help"
 	local subcommand="$(__git_find_on_cmdline "$subcommands")"
 	if [ -z "$subcommand" ]; then
 		__gitcomp "$subcommands"
@@ -93,7 +93,7 @@ __git_drip_feature ()
 		__gitcomp "$(__git_remotes)"
 		return
 		;;
-	co|checkout|finish|diff|rebase|delete)
+	co|checkout|finish|diff|rebase|describe|delete)
 		__gitcomp "$(__git_drip_list_branches 'feature')"
 		return
 		;;

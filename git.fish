@@ -114,6 +114,9 @@ complete -f -c git -n '__fish_git_drip_using_command feature' -a delete   -d 'De
 complete -f -c git -n '__fish_git_drip_using_command feature delete' -s F -d 'Delete remote branch as well'
 complete -f -c git -n '__fish_git_drip_using_command feature delete' -a '(__fish_git_drip_branches feature)' -d 'Feature branch'
 
+complete -f -c git -n '__fish_git_drip_using_command feature' -a describe   -d 'describe a feature branch'
+complete -f -c git -n '__fish_git_drip_using_command feature describe' -a '(__fish_git_drip_branches feature)' -d 'Feature branch'
+
 complete -f -c git -n '__fish_git_drip_using_command feature' -a publish  -d 'Publish a feature branch to remote'
 complete -f -c git -n '__fish_git_drip_using_command feature publish' -a '(__fish_git_drip_unpublished_branches feature)' -d 'Feature branch'
 
